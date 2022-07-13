@@ -1,0 +1,30 @@
+﻿@model Coffee_Shop_Registration.Controllers.Registration
+
+@{
+    ViewData["Title"] = "Registration";
+}
+
+
+<form method="post" asp-action="Results">
+    <label for="FirstName">First Name:</label><br />
+    <input type="text" id="FirstName" name ="FirstName" /><br /><br />
+
+    <label for="LastName">Last Name:</label><br />
+    <input type="text" id="LastName" name="LastName" /><br /><br />
+
+    <label for="Email">E-Mail Address:</label><br />
+    <input type="text" id="Email" name="Email" placeholder="johndoe@example.com" /><br /><br />
+
+    <label for="Password">Create A Password:</label><br />
+    <input type="password" id="Password" name="Password"/><br /><br />
+
+    <input type="submit" />
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
